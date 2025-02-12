@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+@import "tailwindcss";
+
+*{
+    font-family: sans-serif;
+
+    box-sizing: border-box;
+}
+
+
+svg{
+    cursor: pointer;
+}
+
+img {
+  mix-blend-mode: normal !important;
+}
+
+body {
+    --sb-track-color: #ccc;
+    --sb-thumb-color: #ad45ff;
+    --sb-size: 8px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 0px 0px 0px 0px;
+
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 0px 6px 0px 0px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+
+img {
+    mix-blend-mode: multiply;
+  }
